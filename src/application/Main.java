@@ -1,3 +1,5 @@
+package application;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +9,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/application/views/register.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("views/register.fxml"));
         primaryStage.setTitle("Fuel Administration");
         primaryStage.setScene(new Scene(root));
         primaryStage.setMaximized(true);
