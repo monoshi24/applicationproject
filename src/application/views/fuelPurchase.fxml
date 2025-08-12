@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21.0.0" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.controllers.FuelPurchaseController"
+            prefWidth="600" prefHeight="400">
+
+    <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+
+        <Label text="Fuel Purchase" styleClass="header" />
+
+        <!-- Car model dropdown -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Select Car Model:" />
+            <ComboBox fx:id="carComboBox" prefWidth="300" promptText="Choose your car" />
+        </HBox>
+
+        <!-- Fuel prices -->
+        <VBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Current Fuel Prices (R):" style="-fx-font-weight: bold;"/>
+            <Label fx:id="petrolPriceLabel" text="Petrol 95: loading..." />
+            <Label fx:id="dieselPriceLabel" text="Diesel: loading..." />
+            <Label fx:id="lpgPriceLabel" text="LPG: loading..." />
+        </VBox>
+
+        <!-- Fuel type selector -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Fuel Type:" />
+            <ComboBox fx:id="fuelTypeComboBox" prefWidth="150" />
+        </HBox>
+
+        <!-- Quantity input -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Quantity (Liters):" />
+            <TextField fx:id="quantityField" prefWidth="100" promptText="Enter liters" />
+        </HBox>
+
+        <!-- Total price -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Total Price:" />
+            <Label fx:id="totalPriceLabel" text="R0.00" />
+        </HBox>
+
+        <!-- Calculate button -->
+        <Button text="Calculate Total" onAction="#handleCalculateTotal" />
+
+    </VBox>
+
+</AnchorPane>

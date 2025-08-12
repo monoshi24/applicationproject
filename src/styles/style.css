@@ -1,0 +1,58 @@
+/* styles/style.css - paste into the file you created */
+
+/* Global font and subtle background */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Head labels (page titles) */
+.label.header {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222;
+}
+
+/* Standard labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+/* Text fields and password fields */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #d0d7de;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 6px 8px;
+    -fx-font-size: 14px;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #1976d2;
+}
+
+/* Primary buttons */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #1976d2, #0f5aa3);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 16px;
+}
+.button:hover { -fx-background-color: linear-gradient(to bottom, #155a9a, #0b477a); }
+.button:pressed { -fx-background-color: #08335a; }
+
+/* Subtle hyperlink style (for "Forgot Password?") */
+.hyperlink {
+    -fx-text-fill: #1976d2;
+}
+.hyperlink:hover {
+    -fx-underline: true;
+}
+
+/* Spacing helpers (if using style classes) */
+.vbox, .hbox {
+    -fx-spacing: 10px;
+}
